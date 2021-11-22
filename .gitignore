@@ -1,3 +1,4 @@
-.db
-.favicon
-.img
+/db
+/favicon
+/img
+/node_modules

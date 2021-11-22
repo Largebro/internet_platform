@@ -1,0 +1,25 @@
+{
+  "name": "internet_platform",
+  "version": "1.0.0",
+  "description": "Проект интернет-платформы",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Largebro/internet_platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Largebro/internet_platform/issues"
+  },
+  "homepage": "https://github.com/Largebro/internet_platform#readme",
+  "devDependencies": {
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  }
+}

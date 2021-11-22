@@ -4,7 +4,10 @@ const getGoods = () => {
     const getData = () => {
         fetch('https://internet-platform-15a6d-default-rtdb.firebaseio.com/db.json')
             .then((res) => res.json())
-            .then((data) => { console.log(data) }
+            .then((data) => {
+                const array = data.filter(())
+                localStorage.setItem('goods', JSON.stringify(data))
+            }
             )
     }
 
@@ -12,11 +15,14 @@ const getGoods = () => {
     links.forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault()
+            const linkValue = link.textContent;
+            console.log(linkValue);
             getData()
+
         })
     })
-    localStorage.setItem('goods', JSON.stringify({ name: 'all' }))
+
     const goods = JSON.parse(localStorage.getItem('goods'))
 }
 
-getGoods()
+export default getGoods;

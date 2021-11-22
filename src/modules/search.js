@@ -7,4 +7,4 @@ const search = function () {
         console.log(input.value)
     })
 }
-search()
+export default search;
