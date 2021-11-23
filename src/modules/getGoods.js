@@ -3,8 +3,7 @@ import renderGoods from "./renderGoods";
 
 const getGoods = () => {
     const links = document.querySelectorAll('.navigation-link');
-
-
+    const more = document.querySelector('.more')
 
     const getData = (value, category) => {
         fetch('https://internet-platform-15a6d-default-rtdb.firebaseio.com/db.json')
@@ -34,6 +33,13 @@ const getGoods = () => {
     })
     if (localStorage.getItem('goods') && window.location.pathname === 'goods.html') {
         renderGoods(JSON.parse(localStorage.getItem('goods')))
+    }
+    if (more) {
+        more.addEventListener('click', (e) => { //обработка кнопки "показать все" 
+            e.preventDefault()
+            getData();
+
+        })
     }
 }
 
